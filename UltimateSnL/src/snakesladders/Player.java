@@ -54,7 +54,7 @@ public class Player {
 		if (name.toLowerCase().equals("ai")) {
 			ai = true;
 		}
-		pos = 0;
+		this.pos = 0;
 		root.getChildren().add(imgView);
 	}
 
@@ -62,7 +62,7 @@ public class Player {
 	 * @param numSpaces Number of spaces to pass.
 	 */
 	public void move(int numSpaces) {
-		pos += numSpaces;
+		this.pos += numSpaces;
 		display();
 	}
 	
@@ -74,16 +74,20 @@ public class Player {
 		display();
 	}
 	
+	public void setScore(String score) {
+		this.score.setText("");
+	}
+	
 	private void display() {
 		imgView.setX(OFFSET);
 		imgView.setY(OFFSET);
 		try {
-			cells[pos - 1].root.getChildren().add(imgView);
-			score.setText(String.valueOf(pos));
+			this.cells[this.pos - 1].root.getChildren().add(imgView);
+			this.score.setText(String.valueOf(this.pos));
 		}
 		catch(ArrayIndexOutOfBoundsException e) {
-			cells[Board.NUM_CELLS - 1].root.getChildren().add(imgView);
-			score.setText(String.valueOf(Board.NUM_CELLS));
+			this.cells[Board.NUM_CELLS - 1].root.getChildren().add(imgView);
+			this.score.setText(String.valueOf(Board.NUM_CELLS));
 		}
 	}
 	

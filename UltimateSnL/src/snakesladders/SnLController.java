@@ -103,15 +103,18 @@ public class SnLController implements ControlledScreen {
 						}
 					}
 					
-					if (player.pos == 100) {
+					if (player.pos >= 100) {
 						winner = player.name;
 						gameText.winMove(player.name);
 						
 						Timeline waitEnd = new Timeline(
-								new KeyFrame(Duration.millis(5000), e1 -> {
-									for (Player finishedPlayer : players)
-										root.getChildren().remove(finishedPlayer.imgView);
+								new KeyFrame(Duration.millis(1900), e1 -> {
+									for (Player finishedPlayer : players) {
+										finishedPlayer.imgView.setImage(null);
+										finishedPlayer.setScore("");
+									}
 									players.clear();
+									/* new KeyValue(StartupController.themeSong.volumeProperty(), 1.0); */
 									controller.setScreen(5);
 								}));
 						waitEnd.play();
@@ -144,7 +147,7 @@ public class SnLController implements ControlledScreen {
 		AudioClip diceLandSpecial = new AudioClip(
 				this.getClass().getResource("/music/dice_land_special.mp3").toExternalForm());
 		
-		int animTime = (int)(Math.random() * MAX_ANIM_TIME + MIN_ANIM_TIME);
+		int animTime = (int)(Math.random()*(MAX_ANIM_TIME-MIN_ANIM_TIME) + MIN_ANIM_TIME);
 		
 		diceRattle.setCycleCount(Animation.INDEFINITE);
 		diceRattle.play();

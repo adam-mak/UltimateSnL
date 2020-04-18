@@ -47,9 +47,9 @@ public class GameText {
 	public void normalMove(String playerName, int numSpaces) {
 		String s;
 		if (numSpaces == 1)
-			s = playerName + " has moved " + numSpaces + " space.";
+			s = String.format("%s has moved one space.", playerName);
 		else
-			s = playerName + " has moved " + numSpaces + " spaces.";
+			s = String.format("%s has moved %d spaces.", playerName, numSpaces);
 		textGuide.setText(s);
 	}
 	

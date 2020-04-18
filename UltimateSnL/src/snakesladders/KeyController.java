@@ -85,8 +85,8 @@ public class KeyController implements ControlledScreen {
 					  "If your player reaches 100, you win!  However, there will be advantages and obstacles along the way.\n\n"
 					+ "If you ends the turn where a ladder is, they will climb up (not down).\n"
 					+ "Landing on the head of a snake will cause you to fall until you reach its tail.\n\n"
-					+ "Stars will give you an EXTRA roll, giving you the possibility to move up to 12 spaces!\n\n"
-					+ "But be careful, there are also disadvantages, which will cause you to go back to your original position!\n"
+					+ "Stars will give you an EXTRA roll, giving you the possibility to move up to 12 spaces.\n\n"
+					+ "Be careful though, there are also disadvantages, which will take you back to your original position.\n"
 					);
 			t5.setStyle(NORMAL_CSS);
 			textInstructions.getChildren().clear();

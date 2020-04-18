@@ -66,7 +66,7 @@ public class SelectController implements ControlledScreen {
 			finalPlayerIDs = new ArrayList<TextField>(setPlayerNames());
 			/*
 			Timeline volumeFade = new Timeline(
-					new KeyFrame(Duration.millis(1500),
+				new KeyFrame(Duration.millis(1500),
 					new KeyValue(StartupController.themeSong.volumeProperty(), 0.1)));
 			volumeFade.play();
 			*/
@@ -96,7 +96,6 @@ public class SelectController implements ControlledScreen {
 			removeBloom(imgView);
 		});
 		imgView.setOnMousePressed(e -> {
-			System.out.println("hi");
 			pressedImage(imgView, ((double)(7/8)), true);
 		});
 		imgView.setOnMouseReleased(e -> {
@@ -158,6 +157,7 @@ public class SelectController implements ControlledScreen {
 		imgView.setEffect(null);
 	}
 	
+	// doesn't work
 	private void pressedImage(ImageView imgView, double ratio, boolean shrink) {
 		if (shrink) {
 			imgView.setFitHeight(imgView.getImage().getHeight() * ratio);
