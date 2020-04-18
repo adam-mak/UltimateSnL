@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="snakesladders.StartupController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="1000.0">
+         <image>
+            <Image url="@../images/intro-background.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="textUltimate" layoutX="805.0" layoutY="92.0" rotate="38.7" smooth="false" text="Ultimate">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ff0303" />
+                  <Stop color="#009cff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Button layoutX="408.0" layoutY="459.0" onAction="#buttonClickHandler" prefHeight="38.0" prefWidth="184.0" text="Play Game" />
+      <Button layoutX="97.0" layoutY="459.0" onAction="#buttonClickHandler" prefHeight="38.0" prefWidth="199.0" text="Instructions" />
+      <Button layoutX="727.0" layoutY="459.0" onAction="#buttonClickHandler" prefHeight="38.0" prefWidth="107.0" text="Quit" />
+   </children>
+</Pane>

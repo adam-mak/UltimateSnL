@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<Pane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="snakesladders.KeyController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="1000.0">
+         <image>
+            <Image url="@../images/instructions-background.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="back" layoutX="137.0" layoutY="470.0" onAction="#buttonClickHandler" prefHeight="44.0" prefWidth="188.0" text="Back" />
+      <Button fx:id="next" layoutX="670.0" layoutY="470.0" onAction="#buttonClickHandler" prefHeight="44.0" prefWidth="188.0" text="Next" />
+      <Text fx:id="title" blendMode="GREEN" layoutX="375.0" layoutY="69.0" strokeLineJoin="BEVEL" text="Instructions" textAlignment="CENTER">
+         <font>
+            <Font name="Rokkitt ExtraBold" size="48.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="0.7476190476190476" endY="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#d7d6d6" offset="0.4845360824742268" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+         <effect>
+            <DropShadow color="#000000be" height="0.0" offsetX="10.0" offsetY="10.0" radius="9.88" width="41.52" />
+         </effect></Text>
+      <TextFlow fx:id="textInstructions" layoutX="139.0" layoutY="104.0" prefHeight="335.0" prefWidth="721.0" />
+      <ImageView fx:id="snakeDecor" fitHeight="155.0" fitWidth="200.0" layoutX="400.0" layoutY="337.0">
+         <image>
+            <Image url="@../images/snake-lineart-1.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
