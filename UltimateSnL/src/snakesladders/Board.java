@@ -13,7 +13,7 @@ public class Board {
 	public final static int BOARD_LENGTH = 10;
 	/** Total number of cells in the board.
 	 */
-	public final static int NUM_CELLS = (int)(Math.pow(BOARD_LENGTH, 2));
+	public final static int NUM_CELLS = 100;
 	private final int NUM_SNAKES = 7;
 	private final int NUM_LADDERS = 5;
 	private final int NUM_STARS = 5;

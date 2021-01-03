@@ -113,9 +113,11 @@ public class SnLController implements ControlledScreen {
 										finishedPlayer.imgView.setImage(null);
 										finishedPlayer.setScore("");
 									}
+									gameText.reset();
 									players.clear();
 									/* new KeyValue(StartupController.themeSong.volumeProperty(), 1.0); */
 									controller.setScreen(5);
+									return;
 								}));
 						waitEnd.play();
 					}
@@ -126,16 +128,20 @@ public class SnLController implements ControlledScreen {
 					turn++;
 					if (turn > players.size())
 						turn = 1;
-					if (players.get(turn - 1).ai == true)
-						rollAnim();
-					gameText.currentTurn(players.get(turn - 1).name);
+					if (!players.isEmpty()) {
+						Player nextPlayer = players.get(turn - 1);
+						gameText.currentTurn(nextPlayer.name);
+						if (nextPlayer.ai == true)
+							rollAnim();
+					}
 				}));
 		waitTimeline.play();
 	}
 	
 	private void rollAnim() {
+		Player player = players.get(turn - 1);
 		animationFinished = false;
-		gameText.rolling(players.get(turn - 1).name);
+		gameText.rolling(player.name);
 		dieValue = die.roll();
 		final int MIN_ANIM_TIME = 15;
 		final int MAX_ANIM_TIME = 40;
@@ -175,8 +181,8 @@ public class SnLController implements ControlledScreen {
 		gameText = new GameText(root, textGuide);
 		cells = board.initializeBoard();
 		players = new ArrayList<Player>(loadPlayers());
-		
 		rollButton.setFont(Font.font("Rockwell", 14));
+		gameText.firstTurn(players.get(0).name);
 	}
 	
 	private ArrayList<Player> loadPlayers() {

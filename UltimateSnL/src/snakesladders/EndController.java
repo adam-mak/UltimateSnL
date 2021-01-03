@@ -32,13 +32,11 @@ public class EndController implements ControlledScreen {
 		Button clickedButton = (Button)event.getTarget();
 		String buttonLabel = clickedButton.getText();
 		
-		if (buttonLabel.equals("Player Select")) {
+		if (buttonLabel.equals("Player Select"))
 			controller.setScreen(3);
-		}
 		
-		if (buttonLabel.equals("Quit")) {
+		if (buttonLabel.equals("Quit"))
 			System.exit(0);
-		}
 	}
 	
 	public void setPane(Pane root) {

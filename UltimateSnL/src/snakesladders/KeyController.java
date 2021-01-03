@@ -63,8 +63,8 @@ public class KeyController implements ControlledScreen {
 		final String TITLE_CSS = "-fx-font-size: 36; -fx-font-family: Rockwell Extra Bold;";
 		final String SUBTITLE_CSS = "-fx-font-size: 24; -fx-font-family: Rockwell;";
 		final String NORMAL_CSS = "-fx-font-size: 18; -fx-font-family: Rockwell;";
-		switch(page) {
-		case 1:
+		
+		if (page == 1) {
 			Text t1 = new Text("Welcome to Ultimate Snakes and Ladders!");
 			t1.setStyle(TITLE_CSS);
 			Text t2 = new Text("\n\nHow To Play\n\n");
@@ -77,23 +77,21 @@ public class KeyController implements ControlledScreen {
 			t3.setStyle(NORMAL_CSS);
 			textInstructions.getChildren().clear();
 			textInstructions.getChildren().addAll(t1, t2, t3);
-			break;
-		case 2:
+		}
+		
+		else if (page == 2) {
 			Text t4 = new Text("Continue: Objectives\n\n");
 			t4.setStyle(TITLE_CSS);
 			Text t5 = new Text(
 					  "If your player reaches 100, you win!  However, there will be advantages and obstacles along the way.\n\n"
-					+ "If you ends the turn where a ladder is, they will climb up (not down).\n"
-					+ "Landing on the head of a snake will cause you to fall until you reach its tail.\n\n"
-					+ "Stars will give you an EXTRA roll, giving you the possibility to move up to 12 spaces.\n\n"
-					+ "Be careful though, there are also disadvantages, which will take you back to your original position.\n"
+					+ "If you end your turn where a ladder is, your player will climb up (not down).\n"
+					+ "Landing on the head of a snake will cause your player to fall until you reach its tail.\n\n"
+					+ "Stars will give you an EXTRA roll, giving your player the possibility to move up to 12 spaces.\n\n"
+					+ "Be careful though, there are also disadvantages, which will take your player back to your original position.\n"
 					);
 			t5.setStyle(NORMAL_CSS);
 			textInstructions.getChildren().clear();
 			textInstructions.getChildren().addAll(t4, t5);
-			break;
-		default:
-			break;
 		}
 	}
 	

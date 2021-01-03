@@ -32,6 +32,14 @@ public class GameText {
 		textGuide.setText(s);
 	}
 	
+	/** Displays who gets the first roll
+	 * @param playerName The first player that rolls the die.
+	 */
+	public void firstTurn(String playerName) {
+		String s = playerName + " will first roll the die.";
+		textGuide.setText(s);
+	}
+	
 	/** Displays who's turn it is when no actions are underway.
 	 * @param playerName The player who's turn is current roll.
 	 */
@@ -96,5 +104,9 @@ public class GameText {
 	public void winMove(String playerName) {
 		String s = playerName + " has won.";
 		textGuide.setText(s);
+	}
+	
+	public void reset() {
+		textGuide.setText("");
 	}
 }
