@@ -14,5 +14,4 @@ This program was created in Java SE 1.8, so some features such as CSS custom fon
 <div align="center"><strong>Demo Picture</strong>
 
 ![Demo Picture](https://github.com/adam-ius/UltimateSnL/blob/master/UltimateSnL/demo.PNG)
-
-</strong></div>
+</div>
