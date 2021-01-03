@@ -11,6 +11,8 @@ For Eclipse users, here is a [helpful video](https://www.youtube.com/watch?v=oVn
 
 This program was created in Java SE 1.8, so some features such as CSS custom fonts are not functional or supported with Java SE 1.9+.
 
-<div align="center"><strong>Demo Picture</strong><br>
+<div align="center"><strong>Demo Picture</strong>
+
 ![Demo Picture](https://github.com/adam-ius/UltimateSnL/blob/master/UltimateSnL/demo.PNG)
-</br></strong></div>
+
+</strong></div>
