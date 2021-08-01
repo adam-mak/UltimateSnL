@@ -2,7 +2,7 @@
 **Ultimate** Snakes and Ladders. ICS4U Final Project on JavaFX.
 
 Steps to run this program:
-1. Install Download Java SE ([Latest version](https://www.oracle.com/java/technologies/javase-jdk14-downloads.html))
+1. Install and download Java SE ([Latest version](https://www.oracle.com/java/technologies/javase-jdk14-downloads.html))
 2. Download [JavaFX SDK](https://gluonhq.com/products/javafx/)
 3. Install JavaFX to work with this program
 
